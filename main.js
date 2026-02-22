@@ -3,12 +3,14 @@ function toggleMenu() {
   nav.classList.toggle('open');
 }
 
+// Close menu on link click (mobile)
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     document.getElementById('navLinks').classList.remove('open');
   });
 });
 
+// Subtle nav shadow on scroll
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
   if (window.scrollY > 20) {

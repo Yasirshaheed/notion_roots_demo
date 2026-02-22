@@ -253,3 +253,89 @@ a{text-decoration:none;color:inherit}
 }
 .footer-brand .logo-text { color: var(--white); }
 .navbar .logo { display: flex; align-items: center; }
+
+/* ===== MAP SECTION ===== */
+.map-section { padding: 5vw 4vw; background: var(--white); }
+.map-header { margin-bottom: 2.5rem; }
+.map-wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4vw;
+  align-items: start;
+}
+.map-info-block {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.map-info-block:last-of-type { border-bottom: none; }
+.map-val {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.2rem;
+  line-height: 1.6;
+}
+.map-val a {
+  color: var(--black);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 1px;
+  transition: border-color 0.2s;
+}
+.map-val a:hover { border-color: var(--black); }
+.map-embed {
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  line-height: 0;
+}
+.map-embed iframe { display: block; width: 100%; height: 480px; }
+
+/* Map responsive */
+@media (max-width: 900px) {
+  .map-wrapper { grid-template-columns: 1fr; }
+  .map-embed iframe { height: 360px; }
+}
+@media (max-width: 560px) {
+  .map-embed iframe { height: 280px; }
+}
+
+/* ===== MAP SECTION ===== */
+.map-section { padding: 5vw 4vw; background: var(--white); }
+.map-header { margin-bottom: 2.5rem; }
+.map-wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4vw;
+  align-items: start;
+}
+.map-info-block {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.map-info-block:last-of-type { border-bottom: none; }
+.map-val {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.2rem;
+  line-height: 1.6;
+}
+.map-val a {
+  color: var(--black);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 1px;
+  transition: border-color 0.2s;
+}
+.map-val a:hover { border-color: var(--black); }
+.map-embed {
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  line-height: 0;
+}
+.map-embed iframe { display: block; width: 100%; height: 480px; }
+
+/* Map responsive */
+@media (max-width: 900px) {
+  .map-wrapper { grid-template-columns: 1fr; }
+  .map-embed iframe { height: 360px; }
+}
+@media (max-width: 560px) {
+  .map-embed iframe { height: 280px; }
+}
