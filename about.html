@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio — Notion Roots</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="nr_logo.jpg" alt="Notion Roots Logo" class="logo-img logo-dark"/>
+      <span class="logo-text">NOTION ROOTS</span>
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html" class="active">Studio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <header class="page-header">
+    <p class="page-tag">Who We Are</p>
+    <h1 class="page-title">The Studio</h1>
+    <p class="page-sub">A Kochi-based architecture and interiors practice built on craft, context, and purposeful design.</p>
+  </header>
+
+  <section class="section about-section">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Notion Roots Studio"/>
+      </div>
+      <div class="about-text">
+        <p class="page-tag">Our Story</p>
+        <h2 class="section-title">Design + Build,<br>from Kochi.</h2>
+        <p>Notion Roots was founded by <strong>Ar. Rafi Shakkeer</strong> with a simple conviction: that architecture should be rooted — in place, in purpose, and in the lives of the people it serves.</p>
+        <p>Operating out of Kochi, Kerala, we are a full-service design and build studio. We take projects from initial concept through architectural design, interior curation, civil construction, and specialised metalwork — all under one roof.</p>
+        <p>Every project, regardless of scale, receives the same rigorous attention to detail and the same commitment to delivering spaces that endure.</p>
+        <br/>
+        <a href="contact.html" class="btn">Start a Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section values-section">
+    <p class="page-tag" style="text-align:center;">What We Stand For</p>
+    <h2 class="section-title center">Our Values</h2>
+    <div class="values-grid">
+      <div class="value-card"><span class="value-icon">◈</span><h3>Rootedness</h3><p>Every project is shaped by its context — the land, the climate, the community, and the client's culture.</p></div>
+      <div class="value-card"><span class="value-icon">◎</span><h3>Precision</h3><p>We sweat the details. From structural drawings to material selections to final finishes, every decision is considered.</p></div>
+      <div class="value-card"><span class="value-icon">◇</span><h3>Simplicity</h3><p>We resist the unnecessary. The best design is often the most restrained — where nothing can be removed without loss.</p></div>
+      <div class="value-card"><span class="value-icon">◉</span><h3>Integrity</h3><p>We build what we draw. Our design and construction teams work as one, so nothing is lost in translation.</p></div>
+    </div>
+  </section>
+
+  <section class="section team-section">
+    <p class="page-tag">The People</p>
+    <h2 class="section-title">Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" alt="Ar. Rafi Shakkeer"/><h3>Ar. Rafi Shakkeer</h3><p>Principal Architect</p></div>
+      <div class="team-card"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Design Lead"/><h3>Design Lead</h3><p>Interior Design</p></div>
+      <div class="team-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Project Manager"/><h3>Project Manager</h3><p>Civil &amp; Construction</p></div>
+      <div class="team-card"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" alt="Metal Works Lead"/><h3>Metal Works Lead</h3><p>Fabrication &amp; Detailing</p></div>
+    </div>
+  </section>
+
+  <div class="cta-strip">
+    <div class="cta-strip-inner">
+      <p>Ready to build something together?</p>
+      <a href="contact.html" class="btn btn-light">Get in Touch</a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo logo-footer-wrap">
+          <img src="nr_logo.jpg" alt="Notion Roots" class="logo-img logo-white"/>
+          <span class="logo-text" style="color:var(--white)">NOTION ROOTS</span>
+        </div>
+        <div class="footer-sub">Architecture &amp; Interiors &middot; Kochi, Kerala</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">Studio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav class="footer-nav">
+        <a href="https://www.instagram.com/notionroots/" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/ar.rafishakkeer/" target="_blank">@ar.rafishakkeer</a>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; 2026 Notion Roots. All rights reserved. Kochi, Kerala.</p>
+  </footer>
+<script src="main.js"></script>
+</body>
+</html>

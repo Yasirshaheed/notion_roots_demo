@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notion Roots — Architecture & Interiors — Notion Roots</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="nr_logo.jpg" alt="Notion Roots Logo" class="logo-img logo-dark"/>
+      <span class="logo-text">NOTION ROOTS</span>
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">Studio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Kochi, Kerala &nbsp;&middot;&nbsp; Est. Design + Build</p>
+      <h1 class="hero-title">Architecture<br>rooted in<br>purpose.</h1>
+      <p class="hero-sub">Architecture &amp; Interiors &nbsp;&middot;&nbsp; Design + Build</p>
+      <a href="projects.html" class="btn">View Projects</a>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=80" alt="Notion Roots" class="hero-img"/>
+    </div>
+  </section>
+
+  <section class="section intro">
+    <div class="intro-grid">
+      <div>
+        <p class="page-tag">About the Studio</p>
+        <h2 class="section-title">Design + Build,<br>Rooted in Kerala.</h2>
+        <p>Notion Roots is a Kochi-based architectural practice led by <strong>Ar. Rafi Shakkeer</strong>, dedicated to crafting spaces that balance modern sensibility with the warmth of Kerala's built tradition.</p>
+        <p>From concept to completion — we handle architecture, interiors, civil works, and specialised metalwork under one roof.</p>
+        <br/>
+        <a href="about.html" class="link-arrow">About the Studio &rarr;</a>
+      </div>
+      <div class="intro-stats">
+        <div class="stat"><span class="stat-num">123+</span><span class="stat-label">Projects</span></div>
+        <div class="stat"><span class="stat-num">908</span><span class="stat-label">Followers</span></div>
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">Disciplines</span></div>
+        <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Design + Build</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Featured Work</h2>
+      <a href="projects.html" class="link-arrow">All Projects &rarr;</a>
+    </div>
+    <div class="featured-grid">
+      <a href="category.html?cat=architecture" class="feat-card">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" alt="Architecture"/>
+        <div class="feat-info"><span class="feat-cat">Architecture</span><h3>Archway Haven Villa</h3></div>
+      </a>
+      <a href="category.html?cat=interiors" class="feat-card">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="Interiors"/>
+        <div class="feat-info"><span class="feat-cat">Interiors</span><h3>Blush Aesthetics</h3></div>
+      </a>
+      <a href="category.html?cat=special-works" class="feat-card">
+        <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80" alt="Special Works"/>
+        <div class="feat-info"><span class="feat-cat">Special Works</span><h3>Travel &amp; Forex Co.</h3></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section ig-cta">
+    <div class="ig-cta-inner">
+      <p class="page-tag">Follow Along</p>
+      <h2 class="section-title center">@notionroots</h2>
+      <p class="ig-sub">Stay updated with our latest projects and behind-the-scenes on Instagram.</p>
+      <a href="https://www.instagram.com/notionroots/" target="_blank" class="btn">View on Instagram</a>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo logo-footer-wrap">
+          <img src="nr_logo.jpg" alt="Notion Roots" class="logo-img logo-white"/>
+          <span class="logo-text" style="color:var(--white)">NOTION ROOTS</span>
+        </div>
+        <div class="footer-sub">Architecture &amp; Interiors &middot; Kochi, Kerala</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">Studio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav class="footer-nav">
+        <a href="https://www.instagram.com/notionroots/" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/ar.rafishakkeer/" target="_blank">@ar.rafishakkeer</a>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; 2026 Notion Roots. All rights reserved. Kochi, Kerala.</p>
+  </footer>
+<script src="main.js"></script>
+</body>
+</html>

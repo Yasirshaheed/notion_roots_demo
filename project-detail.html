@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project — FORMA</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">FORMA</a>
+    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="detail-hero" id="detailHero"></div>
+
+  <section class="section detail-section">
+    <div class="detail-breadcrumb" id="detailBreadcrumb"></div>
+    <div class="detail-grid">
+      <div class="detail-main">
+        <h1 class="detail-title" id="detailTitle"></h1>
+        <p class="detail-body" id="detailBody"></p>
+        <div class="detail-gallery" id="detailGallery"></div>
+      </div>
+      <aside class="detail-meta-box" id="detailMeta"></aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="logo">FORMA</div>
+        <p class="footer-sub">Architecture &amp; Design Studio</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 FORMA Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const allProjects = {
+      1: { title:"Casa Serena", cat:"residential", catLabel:"Residential", year:"2023", location:"Lisbon, Portugal", area:"420 sqm", status:"Completed", client:"Private Client", hero:"https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80", gallery:["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80","https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80"], body:"Casa Serena is a private residence perched on the hills overlooking Lisbon, designed as a sequence of interconnected volumes that respond to the slope and the sweeping Atlantic view. The material palette — white lime plaster, raw concrete, and oiled oak — references the vernacular of Portuguese architecture while maintaining a rigorous contemporary sensibility. Interior courtyards draw natural light deep into the plan, creating a luminous, serene quality throughout the day." },
+      2: { title:"Axiom Tower", cat:"commercial", catLabel:"Commercial", year:"2023", location:"Dubai, UAE", area:"28,000 sqm", status:"Completed", client:"Axiom Properties", hero:"https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80", gallery:["https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80","https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"], body:"Axiom Tower rises 42 storeys as a slender commercial landmark within Dubai's financial district. The facade employs a double-skin glass system that reduces solar gain while maintaining panoramic city views. The ground plane opens generously to the public, featuring a landscaped plaza and retail arcade that activate the street edge throughout the day and evening." },
+      3: { title:"Lumen Pavilion", cat:"cultural", catLabel:"Cultural", year:"2024", location:"Venice, Italy", area:"1,200 sqm", status:"Completed", client:"Venice Biennale", hero:"https://images.unsplash.com/photo-1565117100080-7af4e8d2b22a?w=1200&q=80", gallery:["https://images.unsplash.com/photo-1575783970733-1aaedde1db74?w=800&q=80","https://images.unsplash.com/photo-1568515387631-8b650bbcdb90?w=800&q=80"], body:"Lumen Pavilion was commissioned for the Venice Architecture Biennale, exploring the threshold between interior and exterior through a latticed structural skin of folded steel plates. Daylight filters through the perforations in shifting patterns, transforming the exhibition space throughout the day. The pavilion was designed to be fully demountable and re-erectable at different locations." },
+      4: { title:"Ridge House", cat:"residential", catLabel:"Residential", year:"2022", location:"Cape Town, South Africa", area:"380 sqm", status:"Completed", client:"Private Client", hero:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80", gallery:["https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80","https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"], body:"Perched on the ridge above Cape Town, this residence is conceived as a series of platforms stepping down the slope, each framing a distinct view of the mountain and ocean beyond. Recycled timber screens and rammed earth walls reference the Cape vernacular and provide thermal mass to moderate the warm climate." },
+      14: { title:"Nomad Resort", cat:"hospitality", catLabel:"Hospitality", year:"2023", location:"Marrakech, Morocco", area:"6,500 sqm", status:"Completed", client:"Nomad Group", hero:"https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=80", gallery:["https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80","https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"], body:"Nomad Resort draws on the deep spatial traditions of Moroccan architecture — the riad, the hammam, the shaded arcade — reinterpreted through a minimal contemporary lens. 32 suites are arranged around a series of garden courtyards, each with a distinct character. Water, shade, and sensory materiality are the primary design tools." },
+      17: { title:"River Promenade", cat:"urban", catLabel:"Urban Design", year:"2023", location:"Seoul, South Korea", area:"4.2 km linear", status:"Completed", client:"Seoul Metropolitan Gov.", hero:"https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80", gallery:["https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80","https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"], body:"The Han River Promenade redesign reclaims 4.2 kilometres of riverfront for pedestrians and cyclists, replacing a legacy of car-dominated infrastructure. Soft landscape interventions, flexible event plazas, and ecological riparian planting work together to create a green corridor through the dense urban fabric of Seoul." },
+      19: { title:"Ash & Stone Apartment", cat:"interior", catLabel:"Interior Design", year:"2024", location:"Copenhagen, Denmark", area:"210 sqm", status:"Completed", client:"Private Client", hero:"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80", gallery:["https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80","https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80"], body:"A top-floor Copenhagen apartment stripped back to its essential structure and rebuilt around a palette of ash timber, honed limestone, and blackened steel. The open-plan living space is organised by a central joinery element that contains kitchen, storage, and a library, allowing the perimeter to remain free and light-filled." },
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id")) || 1;
+    const p = allProjects[id] || allProjects[1];
+
+    document.title = p.title + " — FORMA";
+    document.getElementById("detailHero").style.backgroundImage = `url('${p.hero}')`;
+    document.getElementById("detailBreadcrumb").innerHTML = `<a href="projects.html">Projects</a> / <a href="category.html?cat=${p.cat}">${p.catLabel}</a> / ${p.title}`;
+    document.getElementById("detailTitle").textContent = p.title;
+    document.getElementById("detailBody").textContent = p.body;
+
+    const gallery = document.getElementById("detailGallery");
+    p.gallery.forEach(src => {
+      gallery.innerHTML += `<img src="${src}" alt="${p.title}" loading="lazy"/>`;
+    });
+
+    document.getElementById("detailMeta").innerHTML = `
+      <div class="meta-item"><span class="meta-label">Category</span><span class="meta-val">${p.catLabel}</span></div>
+      <div class="meta-item"><span class="meta-label">Location</span><span class="meta-val">${p.location}</span></div>
+      <div class="meta-item"><span class="meta-label">Year</span><span class="meta-val">${p.year}</span></div>
+      <div class="meta-item"><span class="meta-label">Floor Area</span><span class="meta-val">${p.area}</span></div>
+      <div class="meta-item"><span class="meta-label">Status</span><span class="meta-val">${p.status}</span></div>
+      <div class="meta-item"><span class="meta-label">Client</span><span class="meta-val">${p.client}</span></div>
+      <a href="contact.html" class="btn" style="margin-top:2rem;display:block;text-align:center;">Enquire About This Project</a>
+    `;
+  </script>
+</body>
+</html>

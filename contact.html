@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Notion Roots</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="nr_logo.jpg" alt="Notion Roots Logo" class="logo-img logo-dark"/>
+      <span class="logo-text">NOTION ROOTS</span>
+    </a>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">Studio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+  </nav>
+
+  <header class="page-header">
+    <p class="page-tag">Get in Touch</p>
+    <h1 class="page-title">Contact</h1>
+    <p class="page-sub">Tell us about your project. We'd love to hear what you're planning.</p>
+  </header>
+
+  <section class="section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2 class="section-title">Let's build<br>something together.</h2>
+        <p>Whether you're planning a new home, renovating a space, or have a commercial brief — we're here to listen and advise.</p>
+        <p>We work across Kerala and take on select projects based on fit, timeline, and complexity.</p>
+        <br/>
+        <p><strong>Studio Address</strong><br/>Notion Roots<br/>Kochi, Kerala, India</p>
+        <br/>
+        <p><strong>Instagram</strong><br/><a href="https://www.instagram.com/notionroots/" target="_blank" class="link-arrow">@notionroots</a></p>
+        <br/>
+        <p><strong>Principal Architect</strong><br/><a href="https://www.instagram.com/ar.rafishakkeer/" target="_blank" class="link-arrow">@ar.rafishakkeer</a></p>
+      </div>
+      <div>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" placeholder="Your first name" required/></div>
+            <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" placeholder="Your last name" required/></div>
+          </div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="your@email.com" required/></div>
+          <div class="form-group"><label for="phone">Phone (Optional)</label><input type="tel" id="phone" placeholder="+91 98765 43210"/></div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service">
+              <option value="">Select a service</option>
+              <option>Architecture</option><option>Interiors</option><option>Civil Works</option>
+              <option>Metal Works</option><option>Special Works</option><option>Full Design + Build</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="location">Project Location</label><input type="text" id="location" placeholder="e.g. Kochi, Kerala"/></div>
+          <div class="form-group"><label for="message">Project Brief</label><textarea id="message" rows="5" placeholder="Tell us about your project — type, scale, timeline, and anything else relevant." required></textarea></div>
+          <button type="submit" class="btn form-btn">Send Enquiry</button>
+          <p class="form-success" id="formSuccess">&#10003; Thank you — we'll be in touch soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo logo-footer-wrap">
+          <img src="nr_logo.jpg" alt="Notion Roots" class="logo-img logo-white"/>
+          <span class="logo-text" style="color:var(--white)">NOTION ROOTS</span>
+        </div>
+        <div class="footer-sub">Architecture &amp; Interiors &middot; Kochi, Kerala</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">Studio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav class="footer-nav">
+        <a href="https://www.instagram.com/notionroots/" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/ar.rafishakkeer/" target="_blank">@ar.rafishakkeer</a>
+      </nav>
+    </div>
+    <p class="footer-copy">&copy; 2026 Notion Roots. All rights reserved. Kochi, Kerala.</p>
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById("formSuccess").style.display = "block";
+      e.target.reset();
+      setTimeout(function(){ document.getElementById("formSuccess").style.display = "none"; }, 5000);
+    }
+  </script>
+</body>
+</html>
